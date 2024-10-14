@@ -1,0 +1,32 @@
+pre {
+    .ql-code-block-container {
+        background-color: #c6c6c6;
+        overflow: visible;
+        padding: 15px;
+        position: relative; // Để cho các phần tử con có position: absolute có thể được định vị tương đối
+    }
+
+    .copy-button {
+        position: absolute; // Định vị nút ở vị trí tuyệt đối
+        height: 26px;
+        background-color: #3d3d3d; // Màu nền cho nút
+        color: #b4b4b4; // Màu chữ
+        border: none; // Không có viền
+        padding: 5px 10px; // Khoảng cách bên trong
+        border-radius: 4px; // Bo góc
+        cursor: pointer; // Con trỏ khi di chuột lên nút
+        z-index: 10; // Đảm bảo nút luôn ở trên cùng
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .copy-button-icon {
+            padding-top: 4px;
+        }
+
+        .copy-button-text {
+            padding-top: 1px;
+            font-size: 12px;
+        }
+    }
+}

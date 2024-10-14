@@ -1,0 +1,83 @@
+.sidebar {
+    width: 300px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.section {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section h4 {
+    margin: 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f9fa;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 10px;
+}
+
+.items {
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    min-height: 40px;
+    line-height: 40px;
+
+    &:hover {
+        background-color: #d1d7dc;
+    }
+}
+
+.item-checkbox {
+    display: none; // Ẩn checkbox mặc định
+}
+
+.custom-label {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border: 2px solid #000;
+    background-color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative; // Để sử dụng cho pseudo-element
+
+    // SVG cho dấu check
+    &::after {
+        content: "";
+        display: none; // Ẩn dấu check
+        position: absolute; // Đặt vị trí cho hình ảnh
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="white" d="M5 10l2 2 8-8 1.5 1.5-9.5 9.5-3.5-3.5 1.5-1.5z"/></svg>');
+        background-size: contain; // Kích thước ảnh
+        background-repeat: no-repeat; // Không lặp lại
+    }
+}
+
+// Khi checkbox được chọn
+.item-checkbox:checked+.custom-label {
+    background-color: #000; // Màu nền khi được chọn
+    border: 2px solid #000;
+
+    &::after {
+        display: block; // Hiện dấu check
+    }
+}

@@ -1,0 +1,21 @@
+.ql-editor {
+    min-height: 400px !important;
+}
+
+pre.ql-syntax {
+    background-color: #0d0d0d;
+    color: #f8f8f2;
+    overflow: visible;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.copy-btn {
+    background-color: #2f2f2f;
+    color: #b4b4b4;
+}
+
+.client-ql-editor {
+    text-align: left;
+    padding: 25px;
+}
